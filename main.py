@@ -193,4 +193,7 @@ if __name__ == "__main__":
                         help="Language, writen in the ISO 639-1:2002 2-character code, in lowercase.")
     args = parser.parse_args()
 
-    main(args.input, args.temporary, args.output, args.processes, args.language)
+    # add language if it's the default path
+    out_path = args.output.replace(".tsv", f".{args.language}.tsv") if args.output == "./output.tsv" else args.output
+
+    main(args.input, args.temporary, out_path, args.processes, args.language)
