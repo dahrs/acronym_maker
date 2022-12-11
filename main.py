@@ -91,6 +91,19 @@ def compare_with_toks(init_and_toks: list[tuple[str, any]]) -> [tuple, None]:
     return best
 
 
+def sort_and_avoid_doubles_rank(suggest: tuple, rank_l: list[tuple]) -> list:
+    ranked_w = [rt[1] for rt in rank_l]
+    if suggest[1] in ranked_w:
+        ranked_w_ind = ranked_w.index(suggest[1])
+        if suggest[0] < rank_l[ranked_w_ind][0] or len(suggest[2]) < len(rank_l[ranked_w_ind][2]) or len(
+                "".join(suggest[2])) < len("".join(rank_l[ranked_w_ind][2])):
+            rank_l[ranked_w_ind] = suggest
+    else:
+        rank_l.append(suggest)
+    rank_l = sorted(rank_l, key=lambda x: x[0], reverse=False)[:100]
+    return rank_l
+
+
 def dump_final_tsv(rank_l: list[tuple], out_path: str, reverse_dict: dict):
     fin_tsv = ["Acronym suggestion\tWords used\n"]
     for rrnk in rank_l:
@@ -150,10 +163,9 @@ def main(input_json: str = "./input.json",
         # measure closeness by levenshtein
         for best in tqdm(pool.imap_unordered(compare_with_toks, cand_plus_dict)):
             if best:
-                rank100.append(best)
-                rank100 = sorted(rank100, key=lambda x: x[0], reverse=False)
+                rank100 = sort_and_avoid_doubles_rank(best, rank100)
                 # dump save every 10 min
-                if datetime.now().timestamp() - last_time > 600:
+                if datetime.now().timestamp() - last_time > 120:
                     dump_final_tsv(rank100, output_tsv, rev_in_l_d)
                     last_time = datetime.now().timestamp()
     # output the final document
@@ -181,4 +193,4 @@ if __name__ == "__main__":
                         help="Language, writen in the ISO 639-1:2002 2-character code, in lowercase.")
     args = parser.parse_args()
 
-    main(args.input, args.temporary, args.output, args.processes, args.lang)
+    main(args.input, args.temporary, args.output, args.processes, args.language)

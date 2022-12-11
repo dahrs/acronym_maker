@@ -1,40 +1,101 @@
 Acronym suggestion	Words used
+KIND	keyphrase ; novel ; dataset
+AUDEN	automatic ; dataset ; extraction ; novel
+KEN	keyphrase ; novel
+MUNDA	multilingual ; novel ; dataset ; automatic
+LUMEN	extracted from university theses ; multilingual ; extraction ; novel
+MASKED	multilingual ; automatic ; extraction ; keyphrase ; dataset
+KAMA	keyphrase ; multilingual ; automatic
+EMMA	extracted from university theses ; multilingual ; automatic
+DENG	dataset ; extracted from university theses ; novel ; generation
+MEDAN	multilingual ; automatic ; extraction ; dataset ; novel
 KONG	keyphrase ; novel ; generation
 MANE	multilingual ; automatic ; novel ; extraction
-AUDEN	automatic ; dataset ; extracted from university theses ; novel
+EMBED	extracted from university theses ; multilingual ; extraction ; dataset
+DAEGU	dataset ; extracted from university theses ; generation ; automatic
+KLUGE	keyphrase ; extracted from university theses ; generation ; extraction
+MANAGED	multilingual ; novel ; automatic ; generation ; extraction ; dataset
+MERDEKA	multilingual ; extracted from university theses ; dataset ; extraction ; keyphrase ; automatic
+EUGEN	extracted from university theses ; generation ; extraction ; novel
+MADSEN	multilingual ; automatic ; dataset ; extraction ; novel
+DAMAGE	dataset ; multilingual ; automatic ; generation ; extraction
+KIDMAN	keyphrase ; dataset ; multilingual ; automatic ; novel
+MEKONG	multilingual ; extracted from university theses ; keyphrase ; novel ; generation
+KAMEN	keyphrase ; automatic ; multilingual ; extraction
+ENDGAME	extracted from university theses ; novel ; dataset ; automatic ; multilingual ; generation
+EKMAN	extracted from university theses ; keyphrase ; multilingual ; novel
+URGED	extracted from university theses ; generation ; extraction ; dataset
+UNMASKED	extracted from university theses ; novel ; multilingual ; automatic ; keyphrase ; extraction ; dataset
+EDA	extracted from university theses ; dataset
+NECKED	novel ; extracted from university theses ; keyphrase ; extraction ; dataset
+KDE	keyphrase ; dataset ; extracted from university theses
+SUGDEN	extracted from university theses ; generation ; dataset ; extraction ; novel
+KEEN	keyphrase ; extracted from university theses ; novel
+AGENT	automatic ; generation ; novel ; extracted from university theses
 KAREEM	keyphrase ; automatic ; extracted from university theses ; extraction ; multilingual
 KEEGAN	keyphrase ; extracted from university theses ; extraction ; generation ; automatic
-UNMASKED	extracted from university theses ; novel ; multilingual ; automatic ; keyphrase ; extraction ; dataset
-EKMAN	extracted from university theses ; keyphrase ; multilingual ; novel
-EMDEN	extracted from university theses ; multilingual ; dataset ; extraction ; novel
-EKMAN	extracted from university theses ; keyphrase ; multilingual ; automatic ; novel
-MANAGED	multilingual ; automatic ; novel ; generation ; extraction ; dataset
-ENDGAME	extracted from university theses ; novel ; dataset ; generation ; multilingual ; extraction
-DENMARK	dataset ; extracted from university theses ; multilingual ; automatic ; novel ; keyphrase
-MERDEKA	multilingual ; extracted from university theses ; dataset ; extraction ; keyphrase ; automatic
-MUEANG	extracted from university theses ; multilingual ; extraction ; automatic ; novel ; generation
-MASKED	multilingual ; automatic ; keyphrase ; extraction ; dataset
+MUEANG	multilingual ; extracted from university theses ; automatic ; novel ; generation
+QUAKE	extracted from university theses ; automatic ; keyphrase ; extraction
+GAKUEN	generation ; automatic ; keyphrase ; extracted from university theses ; extraction
+DENMARK	automatic ; extracted from university theses ; novel ; multilingual ; dataset ; keyphrase
+MANET	multilingual ; automatic ; novel ; extraction
+FLANKED	extracted from university theses ; automatic ; novel ; keyphrase ; extraction ; dataset
+MARTEN	extracted from university theses ; multilingual ; automatic ; extraction ; novel
+GRAND	generation ; automatic ; novel ; dataset
+MANDATE	extracted from university theses ; multilingual ; automatic ; novel ; dataset ; extraction
+ENGAGED	extracted from university theses ; novel ; generation ; automatic ; extraction ; dataset
+ENIGMA	extracted from university theses ; novel ; generation ; multilingual ; automatic
+GENOME	extracted from university theses ; generation ; novel ; multilingual ; extraction
+AGENDA	extracted from university theses ; generation ; novel ; dataset ; automatic
+GATED	generation ; automatic ; extracted from university theses ; dataset
 GUNDAM	generation ; automatic ; novel ; dataset ; multilingual
-DENMARK	dataset ; extracted from university theses ; multilingual ; automatic ; novel ; keyphrase
-KEENE	keyphrase ; extracted from university theses ; extraction ; novel
-DENMARK	dataset ; keyphrase ; novel ; multilingual ; automatic ; extraction
-DENMARK	dataset ; extracted from university theses ; multilingual ; automatic ; novel ; keyphrase
-DENGEKI	extracted from university theses ; dataset ; extraction ; novel ; generation ; keyphrase
-DENMARK	dataset ; extracted from university theses ; novel ; multilingual ; extraction ; keyphrase
-MAGDALEN	extracted from university theses ; multilingual ; automatic ; generation ; dataset ; extraction ; novel
-DENGEKI	extracted from university theses ; dataset ; extraction ; novel ; generation ; keyphrase
-MEKONG	extracted from university theses ; multilingual ; extraction ; keyphrase ; novel ; generation
-GAIDEN	generation ; automatic ; novel ; dataset ; extracted from university theses
-DENMARK	dataset ; extraction ; novel ; multilingual ; automatic ; keyphrase
-KEEGAN	extracted from university theses ; keyphrase ; extraction ; generation ; novel
-MERDEKA	multilingual ; extracted from university theses ; dataset ; extraction ; keyphrase ; automatic
-UNMASKED	extracted from university theses ; extraction ; novel ; multilingual ; automatic ; keyphrase ; dataset
-ENDGAME	extracted from university theses ; dataset ; generation ; automatic ; multilingual ; extraction ; novel
-MEKONG	multilingual ; extraction ; keyphrase ; extracted from university theses ; generation
-MEKONG	extracted from university theses ; multilingual ; extraction ; keyphrase ; generation
-UNMASKED	extracted from university theses ; extraction ; novel ; multilingual ; automatic ; keyphrase ; dataset
-UNMASKED	extracted from university theses ; extraction ; novel ; multilingual ; automatic ; keyphrase ; dataset
+DONKEY	extracted from university theses ; dataset ; extraction ; novel ; keyphrase
+MERGED	multilingual ; extracted from university theses ; generation ; extraction ; dataset
+DEMING	dataset ; extraction ; multilingual ; novel ; generation
+GERDA	extracted from university theses ; generation ; automatic ; dataset
+KENDO	keyphrase ; extraction ; novel ; dataset
+TEXAN	extracted from university theses ; extraction ; automatic ; novel
+ENRAGED	extracted from university theses ; extraction ; novel ; automatic ; generation ; dataset
+DECKING	dataset ; extracted from university theses ; keyphrase ; extraction ; novel ; generation
+AMENDS	extracted from university theses ; multilingual ; extraction ; novel ; dataset
+HUMANE	extracted from university theses ; multilingual ; automatic ; novel ; extraction
+STAGED	extracted from university theses ; automatic ; generation ; extraction ; dataset
+MARTE	extracted from university theses ; multilingual ; automatic ; extraction
+TAKEN	extracted from university theses ; automatic ; keyphrase ; extraction ; novel
+MAGE	multilingual ; automatic ; generation ; extraction
+MUTED	multilingual ; extracted from university theses ; extraction ; dataset
+MAKING	multilingual ; automatic ; keyphrase ; novel ; generation
+DENGEKI	dataset ; extracted from university theses ; novel ; generation ; extraction ; keyphrase
+KEATING	keyphrase ; extracted from university theses ; automatic ; extraction ; novel ; generation
+MOCKED	multilingual ; extracted from university theses ; keyphrase ; extraction ; dataset
+MAKE	extracted from university theses ; multilingual ; automatic ; keyphrase
+STAKED	extracted from university theses ; automatic ; keyphrase ; extraction ; dataset
+EMDEN	extracted from university theses ; multilingual ; dataset ; extraction ; novel
+TENGKU	extracted from university theses ; extraction ; novel ; generation ; keyphrase
+DEEMING	dataset ; extracted from university theses ; extraction ; multilingual ; novel ; generation
+GAIDEN	generation ; automatic ; dataset ; extracted from university theses ; novel
 MENKEN	multilingual ; extracted from university theses ; keyphrase ; extraction ; novel
-ENIGMA	extracted from university theses ; generation ; multilingual ; automatic ; extraction
-TEAMED	extracted from university theses ; automatic ; multilingual ; extraction ; dataset
-MANAGED	extracted from university theses ; multilingual ; automatic ; novel ; generation ; dataset
+DAMAGED	extracted from university theses ; dataset ; multilingual ; automatic ; generation ; extraction
+MIDGE	multilingual ; dataset ; generation ; extracted from university theses
+AUGMENT	automatic ; generation ; multilingual ; extraction ; novel ; extracted from university theses
+GENOVA	extracted from university theses ; generation ; extraction ; novel ; automatic
+DIKE	extracted from university theses ; dataset ; keyphrase
+MAGNET	multilingual ; generation ; extraction ; novel ; extracted from university theses
+GENOA	extracted from university theses ; generation ; extraction ; novel ; automatic
+KEANE	keyphrase ; automatic ; novel ; extraction
+IKEDA	extracted from university theses ; keyphrase ; extraction ; dataset
+MAUDE	extracted from university theses ; multilingual ; automatic ; dataset ; extraction
+IMAGED	extracted from university theses ; multilingual ; automatic ; generation ; dataset
+GENK	extracted from university theses ; generation ; keyphrase ; extraction
+KEYONG	extracted from university theses ; keyphrase ; extraction ; novel ; generation
+MAGEE	multilingual ; automatic ; generation ; extracted from university theses
+FAKE	extracted from university theses ; automatic ; keyphrase
+NEGATE	novel ; extracted from university theses ; generation ; automatic ; extraction
+ENDA	extracted from university theses ; dataset ; automatic
+GNOME	generation ; novel ; multilingual ; extracted from university theses
+MANAGE	extracted from university theses ; multilingual ; novel ; automatic ; generation
+MADGE	multilingual ; automatic ; extraction ; dataset ; generation
+GRANDE	generation ; automatic ; novel ; dataset ; extraction
+MUGABE	extracted from university theses ; multilingual ; generation ; automatic ; extraction
+SKAGEN	extracted from university theses ; keyphrase ; generation ; extraction ; novel
+KEITA	extracted from university theses ; keyphrase ; extraction ; automatic
