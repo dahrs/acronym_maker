@@ -1,0 +1,40 @@
+{
+    "novel":
+    [
+        "n"
+    ],
+    "dataset":
+    [
+        "d",
+        "ds"
+    ],
+    "extraction":
+    [
+        "e"
+    ],
+    "automatic":
+    [
+        "a"
+    ],
+    "generation":
+    [
+        "g"
+    ],
+    "multilingual":
+    [
+        "m",
+        "ml"
+    ],
+    "keyphrase":
+    [
+        "k",
+        "kp"
+    ],
+    "extracted from university theses":
+    [
+        "eu",
+        "efu",
+        "efut",
+        "eft"
+    ]
+}

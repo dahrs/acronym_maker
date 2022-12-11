@@ -1,0 +1,37 @@
+{
+    "word":
+    [
+        "valid initial",
+        "alternative initial if applicable",
+        "add as many alternative initials as necessary",
+        "not case sensitive: upper case or lower case letters work the same"
+    ],
+    "1word":
+    [
+        "initial"
+    ],
+    "inseparable words go in the same key":
+    [
+        "initials",
+        "alternative initials"
+    ],
+    "examples":
+    [
+        "actual examples follow up next"
+    ],
+    "research":
+    [
+        "r"
+    ],
+    "multilingual":
+    [
+        "m",
+        "ml"
+    ],
+    "accross a collection of languages":
+    [
+        "aacol",
+        "acol",
+        "acl"
+    ]
+}
