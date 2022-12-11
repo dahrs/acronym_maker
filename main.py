@@ -6,6 +6,7 @@ import os
 import json
 import edlib
 import epitran
+import argparse
 from tqdm import tqdm
 from os.path import isfile
 from collections import deque
@@ -46,7 +47,7 @@ def ind_to_initials(iter_and_init_l: tuple[tuple, list]):
     return clean_ones
 
 
-def get_candidates(word_initials_dict: dict) -> set[str]:
+def get_candidates(word_initials_dict: dict, nb_process: int = 10) -> set[str]:
     # arrange for combinations
     combis = []
     initials = list(word_initials_dict.values())
@@ -58,7 +59,7 @@ def get_candidates(word_initials_dict: dict) -> set[str]:
             combis.append((co, initials))
     # get the candidates in all their variants
     candidates = set()
-    with Pool(processes=10) as pool:
+    with Pool(processes=nb_process) as pool:
         for clean_str_l in tqdm(pool.imap_unordered(ind_to_initials, combis)):
             for clean_str in clean_str_l:
                 candidates.add(clean_str)
@@ -100,7 +101,9 @@ def dump_final_tsv(rank_l: list[tuple], out_path: str, reverse_dict: dict):
 
 def main(input_json: str = "./input.json",
          output_perms: str = "./tmp.json",
-         output_tsv: str = "./output.tsv") -> None:
+         output_tsv: str = "./output.tsv",
+         nb_processes: int = 10,
+         lang: str = "en") -> None:
     with open(input_json, encoding="utf-8") as in_f:
         in_d = json.load(in_f)
     # unify and complete the dict
@@ -131,19 +134,19 @@ def main(input_json: str = "./input.json",
             rev_in_l_d[v_el].append(kk)
     # make a list of all permutations of the initials we do have
     if not isfile(output_perms):
-        candidates = get_candidates(in_l_d)
+        candidates = get_candidates(in_l_d, nb_processes)
         with open(output_perms, mode="w", encoding="utf-8") as out_f:
             json.dump(list(candidates), out_f)
     else:
         with open(output_perms, encoding="utf-8") as in_f:
             candidates = json.load(in_f)
     # browse the whole wikipedia resource to get the best 100 candidates
-    with open("./resources/enTok1000.json", encoding="utf-8") as en_f:
-        en_toks = json.load(en_f)
+    with open(f"./resources/{lang}Tok1000.json", encoding="utf-8") as lang_f:
+        lang_toks = json.load(lang_f)
     rank100 = []
-    cand_plus_dict = [(cand, en_toks) for cand in candidates]
+    cand_plus_dict = [(cand, lang_toks) for cand in candidates]
     last_time = datetime.now().timestamp()
-    with Pool(processes=10) as pool:
+    with Pool(processes=nb_processes) as pool:
         # measure closeness by levenshtein
         for best in tqdm(pool.imap_unordered(compare_with_toks, cand_plus_dict)):
             if best:
@@ -157,9 +160,25 @@ def main(input_json: str = "./input.json",
     dump_final_tsv(rank100, output_tsv, rev_in_l_d)
     #  remove the temporary file
     os.remove(output_perms)
-    # TODO: incorporate sound similarity with epitran and the tok 2 ipa dicts
+    # # TODO: incorporate sound similarity with epitran and the tok 2 ipa dicts
+    # with open(f"./resources/{lang}_ipa.json", encoding="utf-8") as ipa_f:
+    #     ipa_toks = json.load(ipa_f)
     return
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Slow but efficient acronym maker for catchy academic papers.")
+
+    parser.add_argument("-in", "--input", type=str, default="./input.json",
+                        help="Path to the input json file where the words and initials to make the acronym appear.")
+    parser.add_argument("-tmp", "--temporary", type=str, default="./tmp.json",
+                        help="Path to the temporary json file where to save the first wave of initials combinations.")
+    parser.add_argument("-out", "--output", type=str, default="./output.tsv",
+                        help="Path to the output tsv (tab separated values) file where the end file will be saved.")
+    parser.add_argument("-p", "--processes", type=int, default=10,
+                        help="Amount of processes to launch simultaneously in order to parallelize/thread.")
+    parser.add_argument("-lang", "--language", type=str, default="en",
+                        help="Language, writen in the ISO 639-1:2002 2-character code, in lowercase.")
+    args = parser.parse_args()
+
+    main(args.input, args.temporary, args.output, args.processes, args.lang)
